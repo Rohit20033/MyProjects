@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bbox{
+            display: grid;
+             grid-template-columns: repeat(8,1fr);
+             grid-template-rows: auto; 
+            
+        }
+        #bbox>div{
+            border: 3px solid black;
+        }
+        #counter{
+            width: 15%;
+            height: 100px;
+            border: 2px solid black;
+        }
+        h1{
+            text-align: center;
+            color: goldenrod;
+        }
+        h3{
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+      <div id="counter">
+         <div id="count2"><h3>ToTal Products</h3><h1 id="count"></h1></div>
+      </div>
+    <div id="bbox">
+
+    </div>
+</body>
+</html>
+<script src="products.js">
+
+</script>

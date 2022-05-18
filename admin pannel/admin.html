@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form{
+            margin-left: 150px;
+           
+          
+        }
+        #div{
+            width: 90%;
+            background-color: antiquewhite;
+            height: 100px;
+            margin-top: 150px;
+            padding-top: 60px;
+            
+        }
+        #add{
+            border-radius: 5px;
+            border: 1px;
+            background-color: white;
+            color: red;
+            padding: 10px 10px 10px 10px;
+        }
+        #add:hover{
+            background-color: red;
+            color: white;
+        }
+        h1{
+            text-align: center;
+            font-size: 70px;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>DASHBOARD</h1>
+    <a href="products.html"><h2>Listed Products</h2></a>
+   <div id="div">
+    <form action="" id="form">
+        <input type="text" placeholder="Product name" id="name">
+    <input type="text" placeholder="category" id="category">
+    <input type="text" placeholder="Imgae URL" id="image">
+    <input type="text" placeholder="price" id="price">
+    <select name="" id="Gender">
+        <option value="">choose</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+    <select name="" id="sold">
+        <option value="false">False</option>
+        <option value="true">True</option>
+    </select>
+    <input type="submit" value="submit" id="add">
+    </form>
+   </div>
+</body>
+</html>
+<script src="node.js" >
+
+</script>
