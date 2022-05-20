@@ -56,12 +56,9 @@ function displaydata(data){
      var remove=[]
      function removeitem(ele,index){
          
-        remove.push(ele)
+        remove.push(ele,index)
         remove.splice(index,1)
         window.location.reload()
-        
-
-
      }
 
 
