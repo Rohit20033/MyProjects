@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(47, 118, 194);
+        }
+        #show{
+            
+            width: 70%;
+            height: 300px;
+            background-color: white;
+
+        }
+        #data{
+            width: 20%;
+            height: 50px;
+            margin-top: 50px;
+            
+            position: absolute;
+            top: 0;
+            left: 280px;
+           
+        }
+        input{
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+        }
+        button{
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px 25px 10px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid black;
+            background-color:white ;
+            color: rgb(83, 146, 214);;
+        }
+        button:hover{
+            background-color: rgb(83, 146, 214);;
+            color: white;
+        }
+        #gmap_canvas{
+            width: 50%;
+            height: 400px;
+            
+            margin-left: 45%;
+            margin-top: -50%;
+            
+           
+        }
+        #image{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+        }
+        img{
+            width:100%;
+            height: 200px;
+            
+            
+        }
+        .imag{
+            width: 80%;
+            height: 100%;
+            border-radius: 50px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        h3{
+            text-align: center;
+        }
+        #box{
+            display: flex;
+            width: 40%;
+            background-color: white;
+            margin-top: 40px;
+           
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+
+            position: relative;
+            
+            
+        }
+       
+        #weatherimg{
+           width: 15%;
+           margin-top: 70px;
+           background-color: white;
+        }
+        #weatherimg>div{
+            height: 40px;
+            margin-top: 5px;
+            border-radius: 15px;
+        }
+        #df{
+            
+           display: block;
+           margin-left: 0;
+           border-radius: 0;
+            
+        }
+        a{
+            text-decoration: none;
+
+        }
+        #logo{
+            display: flex;
+            width: 20%;
+            height: 90px; 
+            position: absolute;
+            right: -40px;
+            top: -20px;
+            
+            
+            
+        }
+        .logoimg{
+            width: 80%;
+            height: 100%;
+            border-radius: 50px
+            
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="image">
+        <img src="https://s3.amazonaws.com/download.retrospect.com/site/products/cloud.jpg" alt="">
+    </div>
+    <div id="data">
+        <input type="text" id="weather" placeholder="Seacrh city name..">
+        <button id="btn">Search</button>
+    </div>
+     <a href="dailyforcast.html"> <button id="df">Daily forcast</button></a>
+    
+    <div id="box">
+        <div id="weatherimg">
+            <div><img class="imag" src="https://thumbs.gfycat.com/TallUnnaturalCleanerwrasse-max-1mb.gif" alt=""></div>
+            <div>
+                <img class="imag" src="https://m.economictimes.com/thumb/msid-51838086,width-1200,height-900,resizemode-4,imgsize-133706/things-you-can-do-to-beat-the-heat-this-summer.jpg" alt="">
+            </div>
+            <div>
+                <img class="imag" src="https://i.pinimg.com/564x/27/a7/df/27a7df824b4c45cf52b8d010e32721d5.jpg" alt="">
+            </div>
+            <div>
+                <img class="imag" src="https://c.tenor.com/_RNJrEH6uQgAAAAC/sunrise-over-the-mountain.gif" alt="">
+            </div>
+            <div>
+                <img class="imag" src="data:image/jpeg;base64,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" alt="">
+            </div>
+        </div>
+        <div id="show">
+       
+        </div>
+        <div id="logo">
+            <img class="logoimg" src="http://aha.elliance.com/wp-content/uploads/sites/6/2016/03/giphy-1.gif" alt="">
+        </div>
+       
+    </div>
+    
+     
+        <iframe
+        width="600" height="500" id="gmap_canvas" src="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+     
+</body>
+</html>
+<script src="node.js">
+     
+</script>
