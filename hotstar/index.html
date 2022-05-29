@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=  <div id="inputdiv">
+        <style>
+           body{
+        margin: 0;
+        padding: 0;
+        background-color: #0c111b;
+       
+      }
+        #varry{
+            width: 200px;
+
+        }
+        #movies{
+            
+            width: 206px;
+            height: 200px;
+            border: 1px solid black;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin-left: 80%;
+             background-color: #0c111b;
+            opacity: 0;
+        }
+      
+        #inputdiv{
+           width: 100%;
+           height: 100px;
+           
+           margin: auto;
+           background-color: #192133;
+        
+           
+          /* margin-top: 200px;
+          margin-left: ; */
+
+        }
+        input{
+          display: flex;
+          margin: auto;
+          height: 25px;
+          margin-top: 20px;
+          margin-left: 80%;
+          outline: 0;
+          border: 0;
+          color: white;
+          background-color:#192133;
+          
+        
+          
+        }
+        img{
+          display: block;
+          width: 40%;
+          height: 60px;
+          
+          
+        }
+        #lowwerdiv{
+          background-color: #030b17;;
+          margin: auto;
+          margin-top: 10px;
+          width: 90%;
+        
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+        #selectedmovies{
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          grid-template-rows: auto;
+          gap: 30px;
+          width: 90%;
+          margin: auto;
+          margin-top: 100px;
+       
+          
+         
+        }
+        #selectedmovies>div{
+          background-color:   #334366;;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        #image{
+          width: 100%;
+          height: auto;
+        }
+        #pi{
+          color: white;
+          margin-left: 5px;
+          font-size: 13px;
+        }
+        h1{
+          text-align: center;
+        }
+       
+        p{
+          text-align: center;
+          color: white;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        hr{
+          width: 15%;
+          margin-left: 80%;
+          height: 1px;
+          background-color: aqua;
+        }
+        h3{
+          text-align: center;
+        }
+        #trend1{
+          width: 13%;
+          height:50px;
+          margin-top: 50px;
+          margin-left: 20px;
+          
+          border-radius: 15px;
+        }
+        #trend{
+              width: 100%;
+              height: 60px;
+              border-radius: 15px;
+        }
+        
+        
+        </style>
+       
+    <title>Document</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <input type="text" id="varry" oninput="debouncing(main,1000)" placeholder="Search..">
+        <hr>
+        <div id="movies">
+          
+           <div></div>
+        </div>
+       </div>
+        
+       <a href="trending.html"><div id="trend1"><img id="trend" src="https://lemonte.in/image/cache/catalog/Categories/trending%20now-600x315w.png" alt=""></div></a>
+    
+       <div id="selectedmovies">
+    
+       </div>
+</body>
+</html>
+<script src="node.js">
+
+</script>
