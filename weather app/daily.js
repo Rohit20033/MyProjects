@@ -173,7 +173,7 @@ function append(data){
         else  if(day2==1){
            h1.innerText="Monday"
        }
-       else  if(dayday2==2){
+       else  if(day2==2){
            h1.innerText="Tuesday"
        }
        else if(day2==3){
