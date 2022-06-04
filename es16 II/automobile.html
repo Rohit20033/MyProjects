@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script >
+ 
+
+ class automobiles{
+
+    constructor(logo,place,cc){
+
+    this.logo= logo
+    this.Madein= place
+    this.engine= cc 
+   }
+ }
+ var a = new automobiles("Tata","India","1400cc")
+ class car extends automobiles{
+    constructor(type,seat,logo,place,cc){
+        super(logo,place,cc)
+        this.type=type
+        this.seater= seat
+    }
+ }
+ var c = new car("Car",4,"Tata","India","1400cc")
+ console.log(c)
+</script>
